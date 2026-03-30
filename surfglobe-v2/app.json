@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "SurfGlobe",
+    "slug": "surfglobe",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#000510"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.derekrj28.surfglobe",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000510"
+      },
+      "package": "com.derekrj28.surfglobe",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      ["@rnmapbox/maps", {
+        "RNMapboxMapsDownloadToken": ""
+      }],
+      ["expo-build-properties", { "ios": { "useFrameworks": "static" } }],
+      ["expo-location", { "locationWhenInUsePermission": "SurfGlobe needs your location to show nearby surf spots." }]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4cf41e1c-829f-4d32-911b-dcfff27313e3"
+      }
+    }
+  }
+}
